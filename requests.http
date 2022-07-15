@@ -1,0 +1,61 @@
+@jwt = $2a$12$hnB7n2Sg9W0cFT2eFDV2ZufntdnbKCeu36z/FxNHIJSPBg8nkwCC6
+
+### Create employee
+POST http://localhost:3000/employees.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json 
+
+{
+  "first_name": "Pigglet",
+  "last_name": "Piggy",
+  "email": "pp2@example.com",
+  "phone": "123456789",
+  "job_title": "Who Knows",
+  "department_id": "1",
+  "password": "password", 
+  "password_confirmation": "password", 
+  "admin": false
+}
+
+### Update employee
+PATCH  http://localhost:3000/employees/8.json
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+   "job_title": "Toy Maker"
+}
+
+### Destroy employee
+DELETE http://localhost:3000/employees/15.json
+
+
+### Create department
+POST http://localhost:3000/departments.json
+Content-Type: application/json 
+
+{
+  "name": "Secret Agent",
+  "manager": "CIA",
+  "code": "1"
+}
+
+### Update department
+PATCH  http://localhost:3000/departments/4.json
+Content-Type: application/json
+
+{
+   "code": "789"
+}
+
+### Destroy department
+DELETE http://localhost:3000/departments/2.json
+
+### sessions create
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "id": 17,
+  "password": "password"
+}

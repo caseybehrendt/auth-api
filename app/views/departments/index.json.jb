@@ -1,0 +1,9 @@
+@departments.map do |department|
+  {
+    id: department.id,
+    name: department.name,
+    code: department.code,
+    manager: department.manager,
+    employees: department.employees
+  }
+end

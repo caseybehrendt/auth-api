@@ -1,0 +1,6 @@
+{
+  id: @department.id,
+  name: @department.name,
+  code: @department.code,
+  manager: @department.manager
+}
